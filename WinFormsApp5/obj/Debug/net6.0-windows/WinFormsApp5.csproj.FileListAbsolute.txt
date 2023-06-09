@@ -110,3 +110,4 @@ C:\GIT\WindowsFormsApp\WinFormsApp5\obj\Debug\net6.0-windows\WinFormsApp5.genrun
 C:\GIT\WindowsFormsApp\WinFormsApp5\obj\Debug\net6.0-windows\ref\WinFormsApp5.dll
 C:\GIT\WindowsFormsApp\WinFormsApp5\obj\Debug\net6.0-windows\WinFormsApp5.FormAlmuns.resources
 C:\GIT\WindowsFormsApp\WinFormsApp5\obj\Debug\net6.0-windows\WinFormsApp5.Properties.Resources.resources
+C:\GIT\WindowsFormsApp\WinFormsApp5\obj\Debug\net6.0-windows\WinFormsApp5.FromsTrabajadores.resources

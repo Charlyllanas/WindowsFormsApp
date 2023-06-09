@@ -19,18 +19,18 @@ namespace WinFormsApp5
 
             if (!String.IsNullOrEmpty(user) && !String.IsNullOrEmpty(password))
             {
-                var resultLogin = Methods.Login(user, password, validresulQuery);
+                var resultLogin = Methods.Login(user, password, validresultQuery);
                 if (resultLogin.valid)
                 {
                     this.Hide();
                     // open new form
 
-                    if(resultLogin.type != 1) 
+                    if (resultLogin.type != 1)
                     {
                         //Open Form Alumn
 
                     }
-                    else 
+                    else
                     {
                         //Open Form Teacher
                     }
@@ -45,6 +45,11 @@ namespace WinFormsApp5
             {
                 e.Handled = true;
             }
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

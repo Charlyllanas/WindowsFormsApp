@@ -24,7 +24,7 @@ namespace WinFormsApp5.Entity
             return sqlConnection;
         }
 
-        public validResult Login (string matricula, string password, var validresulQuery)
+        public validResult Login(string matricula, string password, var validresulQuery)
         {
             using (SqlConnection connection = GetSqlConnection())
             {

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             label1 = new Label();
             txtUser = new TextBox();
             txtPassword = new TextBox();
@@ -35,6 +36,8 @@
             label3 = new Label();
             button1 = new Button();
             lblMessage = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -48,7 +51,7 @@
             // 
             // txtUser
             // 
-            txtUser.Location = new Point(300, 131);
+            txtUser.Location = new Point(300, 179);
             txtUser.Name = "txtUser";
             txtUser.Size = new Size(276, 27);
             txtUser.TabIndex = 1;
@@ -56,15 +59,16 @@
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(300, 208);
+            txtPassword.Location = new Point(300, 249);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(276, 27);
             txtPassword.TabIndex = 2;
+            txtPassword.TextChanged += txtPassword_TextChanged;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(402, 108);
+            label2.Location = new Point(403, 156);
             label2.Name = "label2";
             label2.Size = new Size(59, 20);
             label2.TabIndex = 3;
@@ -73,7 +77,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(391, 185);
+            label3.Location = new Point(391, 226);
             label3.Name = "label3";
             label3.Size = new Size(83, 20);
             label3.TabIndex = 4;
@@ -81,7 +85,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(349, 260);
+            button1.Location = new Point(346, 292);
             button1.Name = "button1";
             button1.Size = new Size(185, 38);
             button1.TabIndex = 5;
@@ -97,11 +101,22 @@
             lblMessage.Size = new Size(0, 20);
             lblMessage.TabIndex = 6;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(252, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(367, 126);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 7;
+            pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(941, 490);
+            Controls.Add(pictureBox1);
             Controls.Add(lblMessage);
             Controls.Add(button1);
             Controls.Add(label3);
@@ -111,6 +126,7 @@
             Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -124,5 +140,6 @@
         private Label label3;
         private Button button1;
         private Label lblMessage;
+        private PictureBox pictureBox1;
     }
 }
