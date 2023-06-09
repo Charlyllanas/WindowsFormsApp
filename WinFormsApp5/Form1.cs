@@ -19,7 +19,7 @@ namespace WinFormsApp5
 
             if (!String.IsNullOrEmpty(user) && !String.IsNullOrEmpty(password))
             {
-                var resultLogin = Methods.Login(user, password);
+                var resultLogin = Methods.Login(user, password, validresulQuery);
                 if (resultLogin.valid)
                 {
                     this.Hide();

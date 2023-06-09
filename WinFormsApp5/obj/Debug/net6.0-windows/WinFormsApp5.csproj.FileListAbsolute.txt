@@ -108,4 +108,5 @@ C:\GIT\WindowsFormsApp\WinFormsApp5\obj\Debug\net6.0-windows\refint\WinFormsApp5
 C:\GIT\WindowsFormsApp\WinFormsApp5\obj\Debug\net6.0-windows\WinFormsApp5.pdb
 C:\GIT\WindowsFormsApp\WinFormsApp5\obj\Debug\net6.0-windows\WinFormsApp5.genruntimeconfig.cache
 C:\GIT\WindowsFormsApp\WinFormsApp5\obj\Debug\net6.0-windows\ref\WinFormsApp5.dll
-C:\GIT\WindowsFormsApp\WinFormsApp5\obj\Debug\net6.0-windows\WinFormsApp5.FormAlumn.resources
+C:\GIT\WindowsFormsApp\WinFormsApp5\obj\Debug\net6.0-windows\WinFormsApp5.FormAlmuns.resources
+C:\GIT\WindowsFormsApp\WinFormsApp5\obj\Debug\net6.0-windows\WinFormsApp5.Properties.Resources.resources

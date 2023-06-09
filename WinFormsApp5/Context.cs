@@ -24,7 +24,7 @@ namespace WinFormsApp5.Entity
             return sqlConnection;
         }
 
-        public validResult Login (string matricula, string password)
+        public validResult Login (string matricula, string password, var validresulQuery)
         {
             using (SqlConnection connection = GetSqlConnection())
             {
@@ -37,7 +37,8 @@ namespace WinFormsApp5.Entity
                 command.Parameters.AddWithValue("@password", password);
 
                 SqlDataReader reader = command.ExecuteReader();
-                validResult validresulQuery = new validResult();
+                var validresulQuery = new { valid = false, type = (long?)null };
+
 
                 if (reader.Read())
                 {
