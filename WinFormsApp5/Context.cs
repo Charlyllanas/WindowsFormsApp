@@ -12,11 +12,11 @@ namespace WinFormsApp5.Entity
         public class validResult
         {
             public bool valid { get; set; }
-            public long? type { get; set; }
+            public int? type { get; set; }
         }
 
 
-        private string connectionString = @"server=CHARLY-PC\SQLEXPRESS; database=TecSanPedroDB; integrated security=true; TrustServerCertificate=True;";
+        private string connectionString = @"server=CONT6J8F5M3\SQLEXPRESS; database=TecSanPedroDB; integrated security=true; TrustServerCertificate=True;";
 
         private SqlConnection GetSqlConnection()
         {
@@ -24,7 +24,7 @@ namespace WinFormsApp5.Entity
             return sqlConnection;
         }
 
-        public validResult Login(string matricula, string password, var validresulQuery)
+        public validResult Login(string matricula, string password)
         {
             using (SqlConnection connection = GetSqlConnection())
             {
@@ -37,7 +37,7 @@ namespace WinFormsApp5.Entity
                 command.Parameters.AddWithValue("@password", password);
 
                 SqlDataReader reader = command.ExecuteReader();
-                var validresulQuery = new { valid = false, type = (long?)null };
+                var validresulQuery = new validResult();
 
 
                 if (reader.Read())
@@ -46,8 +46,7 @@ namespace WinFormsApp5.Entity
                     string nombre = reader["nombre"].ToString();
                     string type = reader["tipo"].ToString();
                     validresulQuery.valid = true;
-                    validresulQuery.type = long.Parse(type);
-                    MessageBox.Show($"Inicio de sesión exitoso. Bienvenido, {nombre} ");
+                    validresulQuery.type = int.Parse(type);
                     return  validresulQuery;
                 }
                 else
@@ -57,8 +56,126 @@ namespace WinFormsApp5.Entity
                     return validresulQuery;
                 }
 
+            }  
+        }
+
+        public async Task<bool> SolicitudExcelenciaAsync(string matricula, string correo, int promedio, int tipo)
+        {
+            try
+            {
+               
+                    using (SqlConnection connection = GetSqlConnection())
+                    {
+                    await connection.OpenAsync();
+
+                    string query = "INSERT INTO [TecSanPedroDB].[dbo].[SolicitudBecas] (correo, promedio, matricula, tipo, status) VALUES (@correo, @promedio, @matricula, @tipo, 'Revision')";
+                        SqlCommand command = new SqlCommand(query, connection);
+
+                        command.Parameters.AddWithValue("@correo", correo);
+                        command.Parameters.AddWithValue("@promedio", promedio);
+                        command.Parameters.AddWithValue("@matricula", matricula);
+                        command.Parameters.AddWithValue("@tipo", tipo);
+
+                        int rowsAffected = await command.ExecuteNonQueryAsync();
+
+                        if (rowsAffected > 0)
+                        {
+                            // Registro exitoso
+                            MessageBox.Show("Registro realizado correctamente");
+                            return true;
+                        }
+                        else
+                        {
+                            // Error en el registro
+                            MessageBox.Show("Error al realizar el registro");
+                            return false;
+                        }
+                    }
             }
-            
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al realizar el registro: " + ex.Message);
+                return false;
+            }
+        }
+        public async Task<bool> solicitudBecaDeportivaAsync(string matricula, string correo, int promedio, int tipo, string club)
+        {
+            using (SqlConnection connection = GetSqlConnection())
+            {
+                await connection.OpenAsync();
+
+                string query = "INSERT INTO [TecSanPedroDB].[dbo].[SolicitudBecas] (correo, promedio, matricula, tipo, club, status) VALUES (@correo, @promedio, @matricula, @tipo, @club,'Revision')";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                command.Parameters.AddWithValue("@correo", correo);
+                command.Parameters.AddWithValue("@promedio", promedio);
+                command.Parameters.AddWithValue("@matricula", matricula);
+                command.Parameters.AddWithValue("@tipo", tipo);
+                command.Parameters.AddWithValue("@club", club);
+
+                int rowsAffected = await command.ExecuteNonQueryAsync();
+
+                if (rowsAffected > 0)
+                {
+                    // Registro exitoso
+                    MessageBox.Show("Registro realizado correctamente");
+                    return true;
+                }
+                else
+                {
+                    // Error en el registro
+                    MessageBox.Show("Error al realizar el registro");
+                    return false;
+                }
+            }
+        }
+
+        public async Task<bool> SolicitudBecaAyudaAsync(string matricula, string correo, int promedio, int tipo, int ingreso)
+        {
+            using (SqlConnection connection = GetSqlConnection())
+            {
+                await connection.OpenAsync();
+
+                string query = "INSERT INTO [TecSanPedroDB].[dbo].[SolicitudBecas] (correo, promedio, matricula, tipo, ingreso, status) VALUES (@correo, @promedio, @matricula, @tipo, @ingreso,'Revision')";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                command.Parameters.AddWithValue("@correo", correo);
+                command.Parameters.AddWithValue("@promedio", promedio);
+                command.Parameters.AddWithValue("@matricula", matricula);
+                command.Parameters.AddWithValue("@tipo", tipo);
+                command.Parameters.AddWithValue("@ingreso", ingreso);
+
+                int rowsAffected = await command.ExecuteNonQueryAsync();
+
+                if (rowsAffected > 0)
+                {
+                    // Registro exitoso
+                    MessageBox.Show("Registro realizado correctamente");
+                    return true;
+                }
+                else
+                {
+                    // Error en el registro
+                    MessageBox.Show("Error al realizar el registro");
+                    return false;
+                }
+            }
+        }
+
+        public async Task<int> ExisteBecaAsync(string matricula)
+        {
+            using (SqlConnection connection = GetSqlConnection())
+            {
+                await connection.OpenAsync();
+
+                string query = "SELECT COUNT(*) FROM [TecSanPedroDB].[dbo].[SolicitudBecas] WHERE matricula = @matricula";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@matricula", matricula);
+
+                var count = await command.ExecuteScalarAsync();
+
+                return Convert.ToInt32(count);
+            }
         }
     }
 

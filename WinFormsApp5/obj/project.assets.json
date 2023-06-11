@@ -3223,23 +3223,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\chapa\\.nuget\\packages\\": {},
+    "C:\\Users\\pablo.lopez\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GIT\\WindowsFormsApp\\WinFormsApp5\\WinFormsApp5.csproj",
+      "projectUniqueName": "C:\\SchoolGIT\\WindowsFormsApp\\WinFormsApp5\\WinFormsApp5.csproj",
       "projectName": "WinFormsApp5",
-      "projectPath": "C:\\GIT\\WindowsFormsApp\\WinFormsApp5\\WinFormsApp5.csproj",
-      "packagesPath": "C:\\Users\\chapa\\.nuget\\packages\\",
-      "outputPath": "C:\\GIT\\WindowsFormsApp\\WinFormsApp5\\obj\\",
+      "projectPath": "C:\\SchoolGIT\\WindowsFormsApp\\WinFormsApp5\\WinFormsApp5.csproj",
+      "packagesPath": "C:\\Users\\pablo.lopez\\.nuget\\packages\\",
+      "outputPath": "C:\\SchoolGIT\\WindowsFormsApp\\WinFormsApp5\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\chapa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\pablo.lopez\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3247,9 +3247,12 @@
         "net6.0-windows"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\GIT\\Nuget": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/devcontpaqi/ContaNube/_packaging/ctinube/nuget/v3/index.json": {},
+        "https://www.myget.org/F/nubecti/auth/ef20de95-b699-4171-854a-35c568526a7/api/v3/index.json": {}
       },
       "frameworks": {
         "net6.0-windows7.0": {
@@ -3291,7 +3294,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
