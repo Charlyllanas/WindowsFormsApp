@@ -3229,11 +3229,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\SchoolGIT\\WindowsFormsApp\\WinFormsApp5\\WinFormsApp5.csproj",
+      "projectUniqueName": "C:\\SchoolGIT\\charly\\WindowsFormsApp\\WinFormsApp5\\WinFormsApp5.csproj",
       "projectName": "WinFormsApp5",
-      "projectPath": "C:\\SchoolGIT\\WindowsFormsApp\\WinFormsApp5\\WinFormsApp5.csproj",
+      "projectPath": "C:\\SchoolGIT\\charly\\WindowsFormsApp\\WinFormsApp5\\WinFormsApp5.csproj",
       "packagesPath": "C:\\Users\\pablo.lopez\\.nuget\\packages\\",
-      "outputPath": "C:\\SchoolGIT\\WindowsFormsApp\\WinFormsApp5\\obj\\",
+      "outputPath": "C:\\SchoolGIT\\charly\\WindowsFormsApp\\WinFormsApp5\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
