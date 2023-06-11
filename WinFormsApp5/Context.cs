@@ -16,7 +16,7 @@ namespace WinFormsApp5.Entity
         }
 
 
-        private string connectionString = @"server=CHARLY-PC\SQLEXPRESS; database=TecSanPedroDB; integrated security=true; TrustServerCertificate=True;";
+        private string connectionString = @"server=CONT6J8F5M3\SQLEXPRESS; database=TecSanPedroDB; integrated security=true; TrustServerCertificate=True;";
 
         private SqlConnection GetSqlConnection()
         {

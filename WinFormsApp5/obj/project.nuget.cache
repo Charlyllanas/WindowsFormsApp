@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l67uaFviciVDI+I6k95KCqDnDOY5NtAkENzI8i2K6eIlXLBIRr2jzNk2RT4SI619eAOMmIItMCsy1chRGKTuKw==",
+  "dgSpecHash": "9sJAo/B2adSqOhLZhSL+pwI8zgLMrnbytNPuhsW7fKxtD4cyW0HIzkM1jaHZ9QP3AWxiRQ5coSD9TTIEF3JDzQ==",
   "success": true,
-  "projectFilePath": "C:\\SchoolGIT\\charly\\WindowsFormsApp\\WinFormsApp5\\WinFormsApp5.csproj",
+  "projectFilePath": "C:\\SchoolGIT\\WindowsFormsApp\\WinFormsApp5\\WinFormsApp5.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pablo.lopez\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\pablo.lopez\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
